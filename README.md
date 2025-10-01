@@ -14,8 +14,8 @@ by host operating system.
 
 | **Host Operating System** | **Link with...** |
 | :---: | :--- |
-| Windows | `-lopengl32 and -lgdi32` |
-| macOS | `-framework OpenGL and -framework Cocoa` |
+| Windows | `-lopengl32 -lgdi32` |
+| macOS | `-framework OpenGL -framework Cocoa` |
 | Linux<sup>*</sup> | `-lGLU -lGL -lX11` |
 
 <sup>*</sup> For Linux/Ubuntu users, you'll need to install the X11 and
