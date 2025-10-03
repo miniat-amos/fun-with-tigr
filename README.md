@@ -1,6 +1,10 @@
 # Fun with TIGR
 A bunch of small programs to demonstrate what you can do with TIGR, the TIny
-GRaphics library
+GRaphics library.  Each program is designed to be minimal to get you going
+very quicky.  There are lots of comments the first time something new shows
+up, but we dont' repeat those comments in later programs.
+
+Writing programs that use graphics are fun.  Have fun!
 
 ## Building a fun program
 TIGR is cross platform, but you will need to link the correct libraries
