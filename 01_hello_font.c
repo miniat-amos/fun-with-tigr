@@ -7,11 +7,10 @@
  */
 #include "tigr.h"
 
-const char title[] = "01_hello_font";  // a title for the window
 const char str[] = "Hello, font...\nTIGR has a nice builtin font.";
 
 int main(int argc, char *argv[]) {
-    Tigr *screen = tigrWindow(300, 200, title, TIGR_FIXED);
+    Tigr *screen = tigrWindow(300, 200, __FILE__, TIGR_FIXED);
 
     while (!tigrClosed(screen)) {
         tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));

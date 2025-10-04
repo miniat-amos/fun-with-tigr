@@ -6,11 +6,10 @@
  */
 #include "tigr.h"
 
-const char title[] = "02_hello_esc";
 const char str[] = "Press the ESC key to exit...";
 
 int main(int argc, char *argv[]) {
-    Tigr *screen = tigrWindow(300, 200, title, TIGR_FIXED);
+    Tigr *screen = tigrWindow(300, 200, __FILE__, TIGR_FIXED);
 
     /**
      * Terminate this main loop if the 'X' is clicked or ESC pressed

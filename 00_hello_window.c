@@ -11,7 +11,12 @@
  */
 #include "tigr.h"
 
-const char title[] = "00_hello_window";  // a title for the window
+/**
+ * A useful macro defined in standard C is __FILE__.  It is always
+ * replaced with a string that is the name of the file it is in,
+ * in this case, __FILE__ is the string "00_hello_window.c".
+ */
+const char title[] = __FILE__;  // a title for the window
 
 int main(int argc, char *argv[]) {
     /**
