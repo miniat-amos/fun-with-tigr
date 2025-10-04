@@ -6,7 +6,22 @@ up, but we dont' repeat those comments in later programs.
 
 Writing programs that use graphics are fun.  Have fun!
 
-## Building a fun program
+## Building these fun programs
+
+### Building with GNU Make
+
+For simplicity, you can use GNU Make to build all the fun programs at once.
+To build everything, run the command...
+
+```make```
+
+To delete ("clean") all the built fun program executables and TIGR
+object file, run the command...
+
+```make clean```
+
+### Building fun programs yourself
+
 TIGR is cross platform, but you will need to link the correct libraries
 based on your host operating system.  For the sake of these examples, I'm
 using GCC/G++, although the same options worked with Clang/Clang++ at the
