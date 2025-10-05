@@ -1,6 +1,7 @@
 # Fun with TIGR
-A bunch of small programs to demonstrate what you can do with TIGR, the TIny
-GRaphics library.  Each program is designed to be minimal to get you going
+A bunch of small programs to demonstrate what you can do with
+[TIGR, the TIny GRaphics library](https://github.com/erkkah/tigr).
+Each program is designed to be minimal to get you going
 very quicky.  There are lots of comments the first time something new shows
 up, but we dont' repeat those comments in later programs.
 
