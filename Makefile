@@ -2,6 +2,8 @@ SRCS := $(wildcard [0-9][0-9]*.c)
 TARGETS := $(patsubst %.c,%,$(SRCS))
 FILES_TO_CLEAN := $(TARGETS) tigr.o
 
+CFLAGS :=
+
 # Get lowercase OS name (linux, darwin, windows)
 OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 
@@ -21,14 +23,18 @@ else
     $(warning Unknown operating system ($(OS)). No link flags and using "rm -f" for cleanup.)
 endif
 
-.PHONY: all clean
+.PHONY: all clean debug
+
 all: $(TARGETS)
 
+debug: CFLAGS += -g -O0
+debug: $(TARGETS)
+
 tigr.o: tigr.c
-	gcc -c $^
+	gcc $(CFLAGS) -c $^
 
 %: %.c tigr.o
-	gcc -o $@ $^ $(LDFLAGS)
+	gcc $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 clean:
 	$(RM_CMD) -f $(FILES_TO_CLEAN)
