@@ -31,4 +31,4 @@ tigr.o: tigr.c
 	gcc -o $@ $^ $(LDFLAGS)
 
 clean:
-	rm -f $(FILES_TO_CLEAN)
+	$(RM_CMD) -f $(FILES_TO_CLEAN)
