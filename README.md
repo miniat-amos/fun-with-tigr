@@ -6,6 +6,13 @@ up, but we dont' repeat those comments in later programs.
 
 Writing programs that use graphics are fun.  Have fun!
 
+## No comment
+
+Each fun program is in its own single `.c` file and is heavily
+commented for sections introducing new things.  If the comments are
+in your way, try the equivalent `.c` file whose name begins `no_comment_`.
+Only the comment describing the programs were kept.
+
 ## Building these fun programs
 
 ### Building with GNU Make
