@@ -1,4 +1,4 @@
-# Fun with TIGR
+# Fun with TIGR ![Logo](assets/fun_with_tigr.png)
 A bunch of small programs to demonstrate what you can do with
 [TIGR, the TIny GRaphics library](https://github.com/erkkah/tigr).
 Each program is designed to be minimal to get you going
