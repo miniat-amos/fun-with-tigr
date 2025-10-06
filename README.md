@@ -19,6 +19,7 @@ Only the comment describing the programs were kept.
 ### Building with GNU Make
 
 For simplicity, you can use GNU Make to build all the fun programs at once.
+It's written to assume you have `gcc`, but you can change it if needed.
 To build everything, run the command...
 
 ```make```
