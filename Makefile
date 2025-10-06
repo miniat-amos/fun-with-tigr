@@ -1,3 +1,5 @@
+CC := gcc
+
 SRCS := $(wildcard [0-9][0-9]*.c)
 TARGETS := $(patsubst %.c,%,$(SRCS))
 FILES_TO_CLEAN := $(TARGETS) tigr.o
@@ -31,10 +33,10 @@ debug: CFLAGS += -g -O0
 debug: $(TARGETS)
 
 tigr.o: tigr.c
-	gcc $(CFLAGS) -c $^
+	$(CC) $(CFLAGS) -c $^
 
 %: %.c tigr.o
-	gcc $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 clean:
 	$(RM_CMD) -f $(FILES_TO_CLEAN)
