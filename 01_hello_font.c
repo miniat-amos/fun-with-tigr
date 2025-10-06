@@ -1,6 +1,6 @@
 /**
  * Program: 01_hello_font
- * 
+ *
  * This program uses the builtin TIGR font to draw some text to the screen.
  * Notice that the string used has a newline in the middle, and TIGR
  * uses this to print the string across two visible lines.
@@ -14,10 +14,10 @@ int main(int argc, char *argv[]) {
 
     while (!tigrClosed(screen)) {
         tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
-        
+
         /* Use the builtin TIGR font to draw some text */
         tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);
-        
+
         tigrUpdate(screen);
     }
 

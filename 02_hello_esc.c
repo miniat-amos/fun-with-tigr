@@ -1,6 +1,6 @@
 /**
  * Program: 02_hello_esc
- * 
+ *
  * This program shows how to detect the ESC key and one way a
  * program could terminate when that happens.
  */
@@ -16,8 +16,8 @@ int main(int argc, char *argv[]) {
      */
     while (!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
         tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
-        
-        tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);        
+
+        tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);
         tigrUpdate(screen);
     }
 

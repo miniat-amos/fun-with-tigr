@@ -1,6 +1,6 @@
 /**
  * Program: 04_hello_image
- * 
+ *
  * This program loads the Fun with TIGR logo image and displays it
  * centered on the window.
  */
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
          * along with top-left and width/height of the part of the
          * source bitmap you want to copy over.  This is known in
          * the graphics world as a "block transfer", "blit" for short.
-         * 
+         *
          * Check out tigrBlitAlpha() if you want to use images with
          * transparency or to blend in a totally opaque image.
          */

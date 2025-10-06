@@ -1,6 +1,6 @@
 /**
  * Program: 01_hello_font
- * 
+ *
  * This program uses the builtin TIGR font to draw some text to the screen.
  * Notice that the string used has a newline in the middle, and TIGR
  * uses this to print the string across two visible lines.

@@ -1,6 +1,6 @@
 /**
  * Program: 02_hello_esc
- * 
+ *
  * This program shows how to detect the ESC key and one way a
  * program could terminate when that happens.
  */
