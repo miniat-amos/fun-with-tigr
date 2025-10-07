@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     Tigr *screen = tigrWindow(300, 200, title, TIGR_FIXED);
 
     /* Fill the window bitmap with DataBase Fabulous */
-    tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
+    tigrClear(screen, tigrRGB(0X55, 0XBB, 0X55));
 
     /* Until the window is closed (eg, click the 'X') */
     while (!tigrClosed(screen)) {

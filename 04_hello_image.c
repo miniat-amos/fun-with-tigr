@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     int top = ((screen->h - fun_tigr->h) / 2);
 
     while (!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
-        tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
+        tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
         /**
          * tigrBlit() copies part of a TIGR bitmap to another

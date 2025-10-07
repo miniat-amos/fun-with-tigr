@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     int top = ((screen->h - fun_tigr->h) / 2);
 
     while (!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
-        tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
+        tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
         tigrBlit(screen, fun_tigr, left, top, 0, 0, fun_tigr->w, fun_tigr->h);
         tigrUpdate(screen);

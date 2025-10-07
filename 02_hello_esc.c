@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
      * Terminate this main loop if the 'X' is clicked or ESC pressed
      */
     while (!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
-        tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
+        tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
         tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);
         tigrUpdate(screen);

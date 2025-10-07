@@ -16,7 +16,7 @@ const char title[] = __FILE__;
 int main(int argc, char *argv[]) {
     Tigr *screen = tigrWindow(300, 200, title, TIGR_FIXED);
 
-    tigrClear(screen, tigrRGB(0xDD, 0xBB, 0xFF));
+    tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
     while (!tigrClosed(screen)) {
         tigrUpdate(screen);
