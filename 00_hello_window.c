@@ -5,7 +5,7 @@
  * made as large as possible to contain an integer-scaled version of
  * its bitmap surface. Resizing the window will scale the bitmap in
  * integer steps and letterbox it.  The 300x200 bitmap is cleared
- * to the color DataBase Fabulous... courtesy of Leroy.
+ * to the color 0x55BB55.
  *
  * Search tigr.h for TIGR_FIXED to find additional window modes.
  */
