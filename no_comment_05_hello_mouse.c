@@ -1,3 +1,9 @@
+/**
+ * Program: 05_hello_mouse
+ *
+ * This program shows the current mouse X, Y coordinates along with
+ * the mouse button states.
+ */
 #include <stdio.h>
 #include "tigr.h"
 
