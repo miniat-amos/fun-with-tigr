@@ -6,23 +6,24 @@ FILES_TO_CLEAN := $(TARGETS) tigr.o
 
 CFLAGS :=
 
-# Get lowercase OS name (linux, darwin, windows)
-OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
-
-ifeq ($(OS),windows)
+ifeq ($(OS),Windows_NT)
     LDFLAGS := -lopengl32 -lgdi32
 	RM_CMD = del /q
-else ifeq ($(OS),darwin)
-    LDFLAGS := -framework OpenGL -framework Cocoa
-	RM_CMD = rm -f
-else ifeq ($(OS),linux)
-    LDFLAGS := -lGLU -lGL -lX11
-	RM_CMD = rm -f
 else
-    # unknown systems
-    LDFLAGS :=
-    RM_CMD = rm -f
-    $(warning Unknown operating system ($(OS)). No link flags and using "rm -f" for cleanup.)
+    OS := $(shell uname -s)
+
+    ifeq ($(OS),Darwin)
+        LDFLAGS := -framework OpenGL -framework Cocoa
+        RM_CMD = rm -f
+    else ifeq ($(OS),Linux)
+        LDFLAGS := -lGLU -lGL -lX11
+        RM_CMD = rm -f
+    else
+        # unknown systems
+        LDFLAGS :=
+        RM_CMD = rm -f
+        $(warning Unknown operating system ($(OS)). No link flags and using "rm -f" for cleanup.)
+    endif
 endif
 
 .PHONY: all clean debug
