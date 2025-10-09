@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         snprintf(mouse_str, size, "(%4d, %4d) with button: %d", x, y, buttons);
 
         tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
-        tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), mouse_str);
+        tigrPrint(screen, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), mouse_str);
         tigrUpdate(screen);
     }
 

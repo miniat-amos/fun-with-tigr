@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
         tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
         /* Use the builtin TIGR font to draw some text */
-        tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);
+        tigrPrint(screen, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), str);
 
         tigrUpdate(screen);
     }

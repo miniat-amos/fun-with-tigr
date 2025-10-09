@@ -23,8 +23,8 @@ int main(int argc, char *argv[]) {
         }
 
         tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
-        tigrPrint(screen, tfont, 50, 75, tigrRGB(0xFF, 0xFF, 0xFF), str);
-        tigrPrint(screen, tfont, 65, 90, tigrRGB(0xFF, 0xFF, 0xFF), key_str);
+        tigrPrint(screen, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), str);
+        tigrPrint(screen, tfont, 45, 75, tigrRGB(0xFF, 0xFF, 0xFF), key_str);
         tigrUpdate(screen);
     }
 
