@@ -31,7 +31,8 @@ int main(int argc, char *argv[]) {
         /**
          * Like tigrFillRect(), tigrFillCircle() on fills the pixels
          * of the circle just inside the one provided by the
-         * coordinate arguments.
+         * coordinate arguments.  It's important to note that circles
+         * are defined by their center instead of their corners.
          */
         tigrFillCircle(screen, 150, 115, 35, tigrRGB(0xFF, 0xFF, 0x00));
 
