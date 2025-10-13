@@ -43,3 +43,5 @@
 # these are our Linux/macOS executables for this project
 [0-9][0-9]*
 ![0-9][0-9]*.c
+![0-9][0-9]*.png
+![0-9][0-9]*.xcf
