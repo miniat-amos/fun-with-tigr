@@ -39,5 +39,7 @@ tigr.o: tigr.c
 %: %.c tigr.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
+99_meatballs: LDFLAGS += -lm
+
 clean:
 	$(RM_CMD) -f $(FILES_TO_CLEAN)
