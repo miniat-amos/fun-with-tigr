@@ -7,6 +7,17 @@
 #include <math.h>
 #include "tigr.h"
 
+typedef enum {
+    MEAT_MODE_SOLID = 0,  // draws somewhat traditional meatballs
+    MEAT_MODE_HOLE,       // opens a hole in the meatball centers
+    MEAT_MODE_SPOT,       // draws the meatball in one color w/ strength as diameter
+    MEAT_MODE_RIPPLE,     // "the talented Meatball Ripplely"
+    MEAT_MODE_DITHER,     // old-school dithering feel
+    MEAT_MODE_DIAMOND,    // diamond balls... is that a thing?
+    MEAT_MODE_RICO,       // His name was Rico.  He wore a...
+    MEAT_MODE_CNT         // how many modes... must be last
+} meat_mode;
+
 /**
  * These values determine how each ball moves around the screen,
  * relative to the center of the screen... cx, cy.
@@ -97,8 +108,14 @@ int main() {
 
     float threshold = 0.6;
 
+    meat_mode mode = MEAT_MODE_SOLID;
     while(!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
         t += tigrTime() / 8.0;  // Move at 1/8th speed
+
+        int key = tigrReadChar(screen);
+        if(key == 'm' || key == 'M') {
+            mode = (mode + 1) % MEAT_MODE_CNT;
+        }
 
         /**
          * OK... One more time for posterity...
@@ -128,10 +145,15 @@ int main() {
                     float dist_sq = (dx * dx + dy * dy);
 
                     float influence = 0.0;
-                    /** Change the comparison value on the right to
-                     * (1.75 * balls[k].strength) to make ring-like meatballs
-                     */
-                    if(dist_sq > -1) { 
+                    if(
+                        (mode == MEAT_MODE_SOLID &&  dist_sq >= 0) ||
+                        (mode == MEAT_MODE_HOLE    &&  dist_sq > (1.75 * balls[k].strength)) ||
+                        (mode == MEAT_MODE_SPOT    &&  dist_sq < balls[k].strength) ||
+                        (mode == MEAT_MODE_RIPPLE  && sinf(sqrtf(dist_sq)) < 0) ||
+                        (mode == MEAT_MODE_DITHER  && cosf(powf(dist_sq, 1)) < 0.65) ||
+                        (mode == MEAT_MODE_DIAMOND && (fabsf(dx) + fabsf(dy)) < powf(balls[k].strength, 0.65)) ||
+                        (mode == MEAT_MODE_RICO    && sinf((fabsf(dx) + fabsf(dy))) < 0)
+                      ) {
                         influence = powf(balls[k].strength, 2) / powf(dist_sq, 1.5);
                     }
                     
@@ -165,6 +187,8 @@ int main() {
 
                 screen->pix[i] = pix;
             }
+
+            tigrPrint(screen, tfont, 3, 3, tigrRGB(0xFF, 0xFF, 0xFF), "'m' toggles mode");
         }
 
         tigrUpdate(screen);
