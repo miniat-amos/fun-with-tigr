@@ -30,6 +30,10 @@ int main(int argc, char *argv[]) {
             tigrFillCircle(screen, (i * 30) + 15, 135, 15, tigrRGB(0xFF, 0xFF, 0x00));
         }
 
+        for(int i = 0; i < 100; i++) {
+            tigrLine(screen, i * 3, 150, i * 3 + 2, 150, tigrRGB(0x00, 0x00, 0x00));
+        }
+
         tigrUpdate(screen);
     }
 

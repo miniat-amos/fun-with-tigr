@@ -7,6 +7,9 @@
  * rectangles and a row of circles, but the dimensions we use
  * describe shapes that should otherwise butt up against one
  * another on their sides.
+ *
+ * Although, not a "filled" shape, the line drawing function similarly
+ * doesn't draw the final coordinate of the line.
  */
 #include <stdio.h>
 #include "tigr.h"
@@ -33,11 +36,21 @@ int main(int argc, char *argv[]) {
         }
 
         /**
-         * This row of circcles seem like they, too, should touch their neighbors
+         * This row of circles seem like they, too, should touch their neighbors
          * on the sides and the rectangles above, but they don't, either.
          */
         for(int i = 0; i < 10; i++) {
             tigrFillCircle(screen, (i * 30) + 15, 135, 15, tigrRGB(0xFF, 0xFF, 0x00));
+        }
+
+        /**
+         * This row of 3 pixel wide line segments would logically create a
+         * long unbroken line across the screen.  Instead it appears as a
+         * dashed line because the last pixel of each 3-pixel line segment
+         * is not drawn.
+         */
+        for(int i = 0; i < 100; i++) {
+            tigrLine(screen, i * 3, 150, i * 3 + 2, 150, tigrRGB(0x00, 0x00, 0x00));
         }
 
         tigrUpdate(screen);
