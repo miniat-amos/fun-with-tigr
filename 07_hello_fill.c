@@ -18,12 +18,13 @@ int main(int argc, char *argv[]) {
 
     Tigr *screen = tigrWindow(300, 200, __FILE__, TIGR_FIXED);
 
-    const char str[] = "Filled shapes do not fill all the way.";
+    const char fill_str[] = "Filled shapes do not fill all the way.";
+    const char line_str[] = "Lines never draw the last pixel.";
 
     while (!tigrClosed(screen) && !tigrKeyDown(screen, TK_ESCAPE)) {
         tigrClear(screen, tigrRGB(0x55, 0xBB, 0x55));
 
-        tigrPrint(screen, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), str);
+        tigrPrint(screen, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), fill_str);
 
         /**
          * Draw a row of rectangles where each's location and dimension
@@ -52,6 +53,8 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < 100; i++) {
             tigrLine(screen, i * 3, 150, i * 3 + 2, 150, tigrRGB(0x00, 0x00, 0x00));
         }
+
+        tigrPrint(screen, tfont, 30, 162, tigrRGB(0xFF, 0xFF, 0xFF), line_str);
 
         tigrUpdate(screen);
     }
