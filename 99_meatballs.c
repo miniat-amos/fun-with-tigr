@@ -83,7 +83,7 @@ int main() {
      * As a reminder, the movement of each ball's center is based
      * on math such as the following, which updates the x coordinate
      * of the center of the ball.
-     * 
+     *
      * x = cx + a * [sin|cos]((t * b) + c) + d
      */
     for(int i = 0; i < ball_cnt; i++) {
@@ -119,7 +119,7 @@ int main() {
 
         /**
          * OK... One more time for posterity...
-         * 
+         *
          * x = cx + a * [sin|cos]((t * b) + c) + d
          */
         for(int i = 0; i < ball_cnt; i++) {
@@ -156,9 +156,9 @@ int main() {
                       ) {
                         influence = powf(balls[k].strength, 2) / powf(dist_sq, 1.5);
                     }
-                    
+
                     sum_influence += influence;
-                    
+
                     if(influence > max_influence) {
                         max_influence = influence;
                         dominant_ball = k;
@@ -170,25 +170,25 @@ int main() {
                  * influential enough.
                  */
                 TPixel pix;
-                
-                if(sum_influence > threshold) {                    
+
+                if(sum_influence > threshold) {
                     TPixel base_color = colors[dominant_ball];
 
                     /* Normalize the influence for a smoother gradient */
-                    float val = fminf(1.0, (sum_influence - threshold) * 2.5); 
+                    float val = fminf(1.0, (sum_influence - threshold) * 2.5);
                     pix.r = (unsigned char)(base_color.r * val);
                     pix.g = (unsigned char)(base_color.g * val);
                     pix.b = (unsigned char)(base_color.b * val);
                     pix.a = 0xff;
                 } else {
                     /* This pixel is too isolated to be a ball color */
-                    pix = background_color; 
+                    pix = background_color;
                 }
 
                 screen->pix[i] = pix;
             }
 
-            tigrPrint(screen, tfont, 3, 3, tigrRGB(0xFF, 0xFF, 0xFF), "'m' toggles mode");
+            tigrPrint(screen, tfont, 3, 3, tigrRGB(0xFF, 0xFF, 0xFF), "'m' cycles meat modes");
         }
 
         tigrUpdate(screen);
