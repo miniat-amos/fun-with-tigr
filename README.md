@@ -20,7 +20,7 @@ Only the comment describing the programs were kept.
 | [![00_hello_window.c](assets/00_hello_window.png)](00_hello_window.c) | [![01_hello_font.c](assets/01_hello_font.png)](01_hello_font.c) |
 | [![02_hello_esc.c](assets/02_hello_esc.png)](02_hello_esc.c) | [![03_hello_characters.c](assets/03_hello_characters.png)](03_hello_characters.c) |
 | [![04_hello_image.c](assets/04_hello_image.png)](04_hello_image.c) | [![05_hello_mouse.c](assets/05_hello_mouse.png)](05_hello_mouse.c) |
-| [![06_hello_drawing.c](assets/06_hello_drawing.png)](06_hello_drawing.c) | [![07_hello_fill.c](assets/07_hello_fill.png)](07_hello_fill.c) |
+| [![06_hello_drawing.c](assets/06_hello_drawing.png)](06_hello_drawing.c) | [![07_details_fill.c](assets/07_details_fill.png)](07_details_fill.c) |
 | [![99_meatballs.c](assets/99_meatballs.png)](99_meatballs.c) | |
 
 ## Building these fun programs
