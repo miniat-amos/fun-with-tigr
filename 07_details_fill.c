@@ -1,5 +1,5 @@
 /**
- * Program: 07_hello_fill
+ * Program: 07_details_fill
  *
  * This program shows how the TIGR "Fill" functions do NOT fill to
  * the full dimensions of the shape.  They fill the space one pixel
