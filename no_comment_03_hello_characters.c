@@ -1,5 +1,5 @@
 /**
- * Program: 03_hello_characters
+ * Program: no_comment_03_hello_characters
  *
  * This program uses tigrReadChar() to detect printable character keypresses
  * and prints the most recent to the screen.  This function does not detect

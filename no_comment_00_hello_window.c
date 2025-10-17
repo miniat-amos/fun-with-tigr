@@ -1,5 +1,5 @@
 /**
- * Program: 00_hello_window
+ * Program: no_comment_00_hello_window
  *
  * This program opens a window in TIGR_FIXED mode... ie, the window is
  * made as large as possible to contain an integer-scaled version of

@@ -1,5 +1,5 @@
 /**
- * Program: 05_hello_mouse
+ * Program: no_comment_05_hello_mouse
  *
  * This program shows the current mouse X, Y coordinates along with
  * the mouse button states.

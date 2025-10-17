@@ -1,5 +1,5 @@
 /**
- * Program: 01_hello_font
+ * Program: no_comment_01_hello_font
  *
  * This program uses the builtin TIGR font to draw some text to the screen.
  * Notice that the string used has a newline in the middle, and TIGR

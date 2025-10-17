@@ -1,5 +1,5 @@
 /**
- * Program: 06_hello_drawing
+ * Program: no_comment_06_hello_drawing
  *
  * This program draws several shapes
  */

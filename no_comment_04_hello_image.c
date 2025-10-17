@@ -1,5 +1,5 @@
 /**
- * Program: 04_hello_image
+ * Program: no_comment_04_hello_image
  *
  * This program loads the Fun with TIGR logo image and displays it
  * centered on the window.
