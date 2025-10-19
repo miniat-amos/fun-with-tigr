@@ -77,8 +77,8 @@ int main(int argc, char *argv[]) {
          * at the cursor's location. Because the window is larger than the
          * canvas and we are centering the canvas, we must subtract by the
          * offset used for centering. This corrects the absolute mouse screen
-         * coordinates the local canvas coordinates and allows us to color the
-         * proper pixels.
+         * coordinates to the local canvas coordinates and allows us to color
+         * the proper pixels.
          */
         if(mbuttons == 1){
             int cx = mx - c_offset_x;
