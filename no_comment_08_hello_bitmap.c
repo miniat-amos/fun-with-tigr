@@ -11,12 +11,12 @@ int main(int argc, char *argv[]) {
     Tigr *screen = tigrWindow(300, 200, __FILE__, TIGR_FIXED);
     Tigr *bitmap = tigrBitmap(300, 200);
 
-    const char bitmap_str[] = "This is on a bitmap!";
-    const char window_str[] = "This is on a window!";
+    const char bitmap_str[] = "These were drawn on an off-screen bitmap!";
+    const char window_str[] = "This text was drawn on the windowed bitmap!";
 
     tigrClear(bitmap, tigrRGB(0x55, 0xBB, 0x55));
 
-    tigrPrint(bitmap, tfont, 30, 60, tigrRGB(0xFF, 0xFF, 0xFF), bitmap_str);
+    tigrPrint(bitmap, tfont, 10, 60, tigrRGB(0xFF, 0xFF, 0xFF), bitmap_str);
 
     tigrRect(bitmap, 30, 80, 70, 70, tigrRGB(0x00, 0x00, 0x00));
     tigrFillRect(bitmap, 30, 80, 70, 70, tigrRGB(0xFF, 0x80, 0x00));
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 
         tigrBlit(screen, bitmap, 0, 0, 0, 0, bitmap->w, bitmap->h);
 
-        tigrPrint(screen, tfont, 160, 160, tigrRGB(0xFF, 0xFF, 0xFF), window_str);
+        tigrPrint(screen, tfont, 10, 160, tigrRGB(0xFF, 0xFF, 0xFF), window_str);
 
         tigrUpdate(screen);
     }
